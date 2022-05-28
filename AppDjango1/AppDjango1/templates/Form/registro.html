@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/validacion/" method="post">
+        {% csrf_token %}
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" maxlength="40" id=""class="form-control" required>
+        {% if status.ErrorNombre %}
+        <p style="color:tomato">{{status.ErrorNombre}}</p>
+        {% endif %}
+        <label for="direccion">Direccion:</label>
+        <input type="text" name="direccion" id="" maxlength="80"class="form-control" required>
+        {% if status.ErrorDireccion %}
+        <p style="color:tomato">{{status.ErrorDireccion}}</p>
+        {% endif %}
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="" maxlength="80" class="form-control"required>
+        {% if status.ErrorEmail %}
+        <p style="color:tomato">{{status.ErrorEmail}}</p>
+        {% endif %}
+        <label for="telefono">Telefono:</label>
+        <input type="tel" name="telefono" id="" maxlength="10"class="form-control" required>
+        {% if status.ErrorTelefono %}
+        <p style="color:tomato">{{status.ErrorTelefono}}</p>
+        {% endif %}
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" id="" maxlength="20" class="form-control"required>
+        <label for="pass2">Repita la contraseña:</label>
+        <input type="password" name="pass2" id="" maxlength="20" class="form-control"required >
+        {% if status.ErrorPassword %}
+        <p style="color:tomato">{{status.ErrorPassword}}</p>
+        {% endif %}
+        <br>
+        <input type="reset" value="Borrar" class="btn btn-danger">
+        <br>
+        <input type="submit" value="Enviar"class="btn btn-primary">
+        
+    </form>
+    
+    <style>
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    
+        form * {
+            max-width: 20%;
+            margin: Spx;
+        }
+    </style>    
+</body>
+</html>
+

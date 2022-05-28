@@ -1,0 +1,9 @@
+# created by virtualenv automatically
+
+bin/*
+lib/*
+AppDjango1/AppDjango1/__pycache__/*
+AppDjango1/gestor/__pycache__/*
+AppDjango1/db.sqlite3
+AppDjango1/gestor/migrations/__pycache__/*
+pyvenv.cfg

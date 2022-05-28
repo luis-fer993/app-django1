@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>saludo</title>
+    </head>
+    <body>
+        
+
+        
+        <h1>Nombre :{{nombre}}, apellido: {{apellido}}</h1>
+
+        <p>Estamos viendo esta plantilla el dia: {{haora.day }} / {{haora.month}} / {{haora.year}}</p>
+
+        {% if profesor == "Profesor Luis" %}
+            <p>ok el profesor es : {{profesor}}</p>
+        {% else %}
+            <p>error</p>
+        {% endif %}
+
+        <!--  
+
+se puede poner un metodo despues de el atributo
+
+ej:
+
+temas.1 :muestra el objeto de la lista en la posicion 1
+
+haora.day :muestra solo el numero del dia
+--> 
+        <p>{{temas.1}}</p>
+
+        <ul>
+            {% for item in temas %}
+
+                <li>{{item}}</li>
+
+            {% endfor %}
+        </ul>
+    </body>
+</html>
+
+<style>
+    p{
+        margin: 20px auto;
+        border: 2px solid yellowgreen;
+        display: inline-block;
+        padding: 10px;
+        font-size: large;
+    }
+    h1{
+        padding: 15px 20px;
+        background-color: tomato;
+        font-size: 30px;
+        text-align: center;
+        font-family: monospace;
+        
+    }
+</style>

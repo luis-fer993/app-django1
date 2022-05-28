@@ -1,0 +1,36 @@
+{% extends './base.html' %}
+{% block title%}RESULTADOS{% endblock %}
+
+{% block content %}
+<div>
+    <table border="1px" >
+        <thead>
+            <tr>
+                <th colspan="3">RESULTADO DE LA BUSQUEDA</th>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <th>Seccion</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if status %}
+                {% for re in registro %}
+                    <tr>
+                        <td>{{re.nombre}}</td>
+                        <td>{{re.seccion}}</td>
+                        <td>{{re.precio}}</td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr >
+                    <td colspan="3"><strong>SIN RESULTADOS</strong></td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+    

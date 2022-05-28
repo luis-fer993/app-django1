@@ -1,0 +1,15 @@
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+form {
+    max-width: 80%;
+    margin: 5px;
+}
+
+td,tr{
+    margin: 1em;
+    padding: 10px;
+}

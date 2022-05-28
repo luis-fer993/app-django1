@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %} Formulario.. {% endblock %}
+{% block content %}  
+
+<style>
+    .container form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   }
+   .container form *{
+    max-width: 20%;
+    margin: Spx;
+   }
+
+</style>
+    <div class="container bg-light rounded">
+        <form action="/respuesta/" method="get">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" size="48" class="form-control">
+             <label for="nacimiento">Fecha de nacimiento:</label>
+             <input type="date" name="nacimiento" >
+            <br>
+            <label for="M">Masculino</label>
+            <input type="radio" name="genero" value="M" id="M">
+            <label for="F">Fenenino</label>
+            <input type="radio" name="genero" value="F" id="F">
+            <br>
+            <input type="submit" value="Enviar" class="btn btn-primary mb-2">
+            <input type="reset" value="Borrar" class="btn btn-secondary">
+        </form>
+    </div>
+
+{% endblock %}

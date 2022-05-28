@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas enlistadas</title>
+</head>
+<body>
+
+    {% include "cabecera.html" %}
+
+    <h1>Mi lista de tareas numero 2 xd</h1>
+
+    <ol>
+        {% for tarea in listado %}
+            {% if tarea != "Aprender Django" %}
+                <li>{{tarea|upper}}</li>
+            {% else %}
+                <li style=" color:tomato; font-size: large;">
+                    {{tarea|upper}}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+
+    <ol>
+        {% for tarea in listado %}
+            {% if tarea != "Aprender Django" %}
+                <li>{{tarea|lower}}</li>
+            {% else %}
+                <li style=" color:tomato; font-size: large;">
+                    {{tarea|lower}}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+
+    <ol>
+        {% for tarea in listado %}
+            {% if tarea != "Aprender Django" %}
+                <li>{{tarea|wordcount}}</li>
+            {% else %}
+                <li style=" color:tomato; font-size: large;">
+                    {{tarea|wordcount}}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+
+    <ol>
+        {% for tarea in listado %}
+            {% if tarea != "Aprender Django" %}
+                <li>{{tarea|first}}</li>
+            {% else %}
+                <li style=" color:tomato; font-size: large;">
+                    {{tarea|first}}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+
+    <ol>
+        {% for tarea in listado %}
+            {% if tarea != "Aprender Django" %}
+                <li>{{tarea|first|lower}}</li>
+            {% else %}
+                <li style=" color:tomato; font-size: large;">
+                    {{tarea|first|lower}}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+</body>
+</html>

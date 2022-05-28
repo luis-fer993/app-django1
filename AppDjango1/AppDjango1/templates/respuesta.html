@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block title %} Bienvenido  {{nombre}} {% endblock %}
+{% block content %}  
+
+
+
+<div class="container bg-light rounded">
+<center>
+    {% if genero == 'M' %}
+
+    <style>span{color: rgb(0, 140, 255);}</style>
+    <h2>Bienvenido <span>{{nombre}}</span></h2>
+    
+    {% else %}
+    
+    <style>span{color: rgb(255, 0, 255);}</style>
+    <h2>Bienvenida <span>{{nombre}}</span></h2>
+    {% endif %}
+<p>El ultimo ingreso suyo fue: <strong>{{fecha}}</strong></p>
+<br>
+<p>Usted tiene {{edad}} años y le recomendamos el siguiente video:</p>
+<br>
+{% if edad <= 8 %}
+    <iframe width="560" height="315" src="{{ vid_n }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+{% endif %}
+{% if edad > 8 and edad <= 20 %}
+
+    <iframe width="560" height="315" src="{{ vid_j }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+{% endif %}
+{% if  edad > 20 %}
+    <iframe width="560" height="315" src="{{ vid_a }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+{% endif %}
+
+</div>
+
+{% endblock %}

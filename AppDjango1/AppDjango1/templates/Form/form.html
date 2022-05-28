@@ -1,0 +1,27 @@
+{% extends './base.html' %}
+
+{% block title%}Formulario de busqueda.{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form action="/resultado/" method="get">
+        <label for="producto" class="col-form-label">Ingrese un texto para Buscar..</label>
+        <input type="text" name="producto" id="producto" maxlength="40" class="form-control">
+        {% if error %}
+            <p style="color: red;">El nombre a buscar debe tener menos de 20 caracteres</p>
+        {% endif %}
+        <br>
+        <label for="seccion">Indique la seccion en la que desea buscar:</label>
+        <select name="seccion" id="">
+            <option value="todos">TODAS</option>
+            {% for sec in articulos %}
+                 <option value="{{sec}}">{{sec|upper}}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Enviar" class="btn btn-primary">
+        <input type="reset" value="Borrar" class="btn btn-danger">
+    </form>
+   </div>
+{% endblock %}
+
