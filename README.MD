@@ -1,7 +1,7 @@
 # My Web con Django
 ---
 
-Proyecto de programacion web, utilizando el framework de django, basado en el lenguaje de programacion de pyton.
+Proyecto de programacion web, utilizando el framework de django, basado en el lenguaje de programacion de python.
 
 ## Caracteristicas:
 - MVC
