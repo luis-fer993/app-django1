@@ -55,7 +55,7 @@ ROOT_URLCONF = 'AppDjango1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/luis-fer/Desktop/coding/app-django1/AppDjango1/AppDjango1/templates'],
+        'DIRS': ['/media/luis-fer/User Data/Docx y archivos/programacion/coding/app-django1/AppDjango1/AppDjango1/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,7 +134,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static","/home/luis-fer/Desktop/coding/app-django1/AppDjango1/AppDjango1/static"
+    BASE_DIR / "static","/media/luis-fer/User Data/Docx y archivos/programacion/coding/app-django1/AppDjango1/AppDjango1/static"
 ]
 
 # Default primary key field type
