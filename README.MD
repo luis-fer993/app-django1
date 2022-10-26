@@ -12,4 +12,4 @@ Proyecto de programacion web, utilizando el framework de django, basado en el le
 
 [![img1](https://raw.githubusercontent.com/luis-fer993/app-django1/master/AppDjango1/AppDjango1/static/img/img2.png "img1")](https://raw.githubusercontent.com/luis-fer993/app-django1/master/AppDjango1/AppDjango1/static/img/img2.png "img1")
 
-[![img4](https://raw.githubusercontent.com/luis-fer993/app-django1/bdf0f2618edabbb2226e10918847e2a6301d3493/AppDjango1/AppDjango1/static/img/img3.png "img3")](https://raw.githubusercontent.com/luis-fer993/app-django1/bdf0f2618edabbb2226e10918847e2a6301d3493/AppDjango1/AppDjango1/static/img/img4.png "img4")
+[![img4](https://raw.githubusercontent.com/luis-fer993/app-django1/master/AppDjango1/AppDjango1/static/img/img4.png "img4")](https://raw.githubusercontent.com/luis-fer993/app-django1/master/AppDjango1/AppDjango1/static/img/img4.png "img4")
